@@ -1,3 +1,4 @@
+using Entity.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Entity.Data
@@ -6,6 +7,7 @@ namespace Entity.Data
 
     public class DataContextEF : DbContext
     {
+        public DbSet<Computer> Computer {get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)
@@ -14,5 +16,12 @@ namespace Entity.Data
                 options => options.EnableRetryOnFailure());
             }
         }
+          protected override void OnModelCreating(ModelBuilder modelBuilder) {
+           modelBuilder.HasDefaultSchema("TutorialAppSchema");
+           modelBuilder.Entity<Computer>()
+        //    .HasNoKey();
+        .HasKey(c=>c.ComputeId);
+        //    .ToTable("TableName", "SchemaName");
+ }
     }
 }
