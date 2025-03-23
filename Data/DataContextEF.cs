@@ -1,5 +1,6 @@
 using Entity.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Entity.Data
 {
@@ -7,7 +8,11 @@ namespace Entity.Data
 
     public class DataContextEF : DbContext
     {
-        public DbSet<Computer> Computer {get; set;}
+        private IConfiguration _config;
+        public DataContextEF(IConfiguration config) {
+_config = config;
+        }
+                public DbSet<Computer> Computer {get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)

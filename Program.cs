@@ -1,19 +1,24 @@
 ﻿using Entity.Data;
 using Entity.Models;
+using Microsoft.Extensions.Configuration;
 
 internal class Program
 {
     static void Main(string[] args)
     {
+        IConfiguration config = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
 
+       
         // Console.WriteLine("Test");
-
-        DataContextEF entityFramework = new DataContextEF();
+Console.WriteLine(config);
+        DataContextEF entityFramework = new DataContextEF(config);
 
         Computer myComputer = new Computer()
         {
             Motherboard = "Z690",
-            CPUCores = 0 ,
+            CPUCores = 0,
             HasWifi = true,
             HasLTE = false,
             ReleaseDate = DateTime.Now,
