@@ -22,3 +22,53 @@ INSERT INTO TutorialAppSchema.Computer (
     VideoCard
 ) VALUES ('Z690 ','True ','False ','3/24/2025 1:37:55 PM ','110.87 ','RTX 2090')
 
+
+INSERT INTO TutorialAppSchema.Computer (
+    Motherboard ,
+    HasWifi ,
+    HasLTE,
+    ReleaseDate,
+    Price,
+    VideoCard
+) VALUES ('Z690 ','True ','False ','3/24/2025 5:10:57 PM ','110.87 ','RTX 2090')
+
+
+INSERT INTO TutorialAppSchema.Computer (
+    Motherboard ,
+    HasWifi ,
+    HasLTE,
+    ReleaseDate,
+    Price,
+    VideoCard
+) VALUES ('Z690 ','True ','False ','3/24/2025 5:31:57 PM ','110.87 ','RTX 2090')
+
+
+INSERT INTO TutorialAppSchema.Computer (
+    Motherboard ,
+    HasWifi ,
+    HasLTE,
+    ReleaseDate,
+    Price,
+    VideoCard
+) VALUES ('Z690 ','True ','False ','3/24/2025 5:33:38 PM ','110.87 ','RTX 2090')
+
+
+INSERT INTO TutorialAppSchema.Computer (
+    Motherboard ,
+    HasWifi ,
+    HasLTE,
+    ReleaseDate,
+    Price,
+    VideoCard
+) VALUES ('Z690 ','True ','False ','3/24/2025 5:36:44 PM ','110.87 ','RTX 2090')
+
+
+INSERT INTO TutorialAppSchema.Computer (
+    Motherboard ,
+    HasWifi ,
+    HasLTE,
+    ReleaseDate,
+    Price,
+    VideoCard
+) VALUES ('Z690 ','True ','False ','3/24/2025 5:38:22 PM ','110.87 ','RTX 2090')
+
