@@ -2,6 +2,7 @@
 using Entity.Data;
 using Entity.Models;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 internal class Program
 {
@@ -17,15 +18,15 @@ internal class Program
 
 
 
-        string ComputersJson = File.ReadAllText("Computers.json");
+        // string ComputersJson = File.ReadAllText("Computers.json");
 
-        JsonSerializerOptions options = new JsonSerializerOptions()
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        };
+        // JsonSerializerOptions options = new JsonSerializerOptions()
+        // {
+        //     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        // };
 
-        IEnumerable<Computer>? computers = JsonSerializer.Deserialize<IEnumerable<Computer>>(ComputersJson, options);
-        // Console.WriteLine(computers.ToString());
+        IEnumerable<Computer>? computers = JsonConvert.DeserializeObject<IEnumerable<Computer>>(File.ReadAllText("Computers.json"));
+
 
         if (computers != null)
         {
@@ -38,6 +39,9 @@ internal class Program
         {
             Console.WriteLine("No computers found.");
         }
+
+        string computersCopy = JsonConvert.SerializeObject(computers, Formatting.Indented);
+        File.WriteAllText("ComputersCopy.json", computersCopy);
 
     }
 
