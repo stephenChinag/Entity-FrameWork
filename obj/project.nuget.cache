@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/UuV8k7O4dY=",
+  "dgSpecHash": "s+h/inWH0qY=",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\Entity.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
