@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Entity\\Entity.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Entity\\Entity.csproj": {
+    "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\Entity.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Entity-FrameWork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,6 +62,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "microsoft.data.sqlclient": {
               "target": "Package",

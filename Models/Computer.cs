@@ -11,7 +11,7 @@ namespace Entity.Models
 
         public bool HasWifi { get; set; }
         public bool HasLTE { get; set; }
-        public DateTime ReleaseDate { get; set; }
+        public DateTime? ReleaseDate { get; set; }
         public Decimal Price { get; set; }
         public string VideoCard { get; set; }
         public Computer()

@@ -1,4 +1,5 @@
-﻿using Entity.Data;
+﻿using System.Text.Json;
+using Entity.Data;
 using Entity.Models;
 using Microsoft.Extensions.Configuration;
 
@@ -6,58 +7,38 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IConfiguration config =  new ConfigurationBuilder()
-        .AddJsonFile("appsetting.json").Build();
-        //         IConfiguration config = new ConfigurationBuilder()
-        //         .AddJsonFile("appsettings.json")
-        //         .Build();
 
 
-        //         // Console.WriteLine("Test");
-        // Console.WriteLine(config);
-        //         DataContextEF entityFramework = new DataContextEF(config);
+        // IConfiguration config = new ConfigurationBuilder()
+        // .AddJsonFile("appsettings.json").Build();
 
-//         Computer myComputer = new Computer()
-//         {
-//             Motherboard = "Z690",
-//             CPUCores = 0,
-//             HasWifi = true,
-//             HasLTE = false,
-//             ReleaseDate = DateTime.Now,
-//             Price = 110.87m,
-//             VideoCard = "RTX 2090"
-//         };
-
-//         // entityFramework.Add(myComputer);
-//         // entityFrmework.
-//         // entityFramework.Add(myComputer);
-//         // entityFramework.SaveChanges();
-//         // IEnumerable<Computer>? computersEf = entityFramework.Computer?.ToList<Computer>();
+        // IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+        // DataContextDapper dapper = new DataContextDapper(config);
 
 
-//         string sql ="\n"+ @"INSERT INTO TutorialAppSchema.Computer (
-//     Motherboard ,
-//     HasWifi ,
-//     HasLTE,
-//     ReleaseDate,
-//     Price,
-//     VideoCard
-// ) VALUES ('" + myComputer.Motherboard
-//       + " ','" + myComputer.HasWifi
-//       + " ','" + myComputer.HasLTE
-//       + " ','" + myComputer.ReleaseDate
-//       + " ','" + myComputer.Price
-//       + " ','" + myComputer.VideoCard
 
-//       + "')\n";
-        // File.WriteAllText("log.txt", sql);
+        string ComputersJson = File.ReadAllText("Computers.json");
 
-//         using StreamWriter openFile = new ("log.txt", append: true);
-//         openFile.WriteLine(sql);
-//         openFile.Close();
+        JsonSerializerOptions options = new JsonSerializerOptions()
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        };
 
-//         string fileText = File.ReadAllText("log.txt");
-// Console.WriteLine(fileText);
+        IEnumerable<Computer>? computers = JsonSerializer.Deserialize<IEnumerable<Computer>>(ComputersJson, options);
+        // Console.WriteLine(computers.ToString());
+
+        if (computers != null)
+        {
+            foreach (Computer computer in computers)
+            {
+                Console.WriteLine($" {computer.Motherboard}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("No computers found.");
+        }
+
     }
 
 
