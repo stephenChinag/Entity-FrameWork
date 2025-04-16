@@ -34,14 +34,14 @@ internal class Program
 
 
             cfg.CreateMap<ComputersSnake, Computer>()
-                .ForMember(dest => dest.ComputeId, opt => opt.MapFrom(src => src.computer_id))
-                .ForMember(dest => dest.Motherboard, opt => opt.MapFrom(src => src.motherboard))
-                .ForMember(dest => dest.CPUCores, opt => opt.MapFrom(src => src.cpu_cores))
-                .ForMember(dest => dest.HasWifi, opt => opt.MapFrom(src => src.has_wifi))
-                .ForMember(dest => dest.HasLTE, opt => opt.MapFrom(src => src.has_lte))
-                .ForMember(dest => dest.ReleaseDate, opt => opt.MapFrom(src => src.release_date))
-                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.price))
-                .ForMember(dest => dest.VideoCard, opt => opt.MapFrom(src => src.video_card));
+            .ForMember(destination => destination.ComputeId, opt => opt.MapFrom(src => src.computer_id)).
+            ForMember(destination => destination.Motherboard, opt => opt.MapFrom(src => src.motherboard)).
+            ForMember(destination => destination.CPUCores, opt => opt.MapFrom(src => src.cpu_cores)).
+            ForMember(destination => destination.VideoCard, opt => opt.MapFrom(src => src.video_card)).
+            ForMember(destination => destination.ReleaseDate, opt => opt.MapFrom(src => src.release_date)).
+            ForMember(destination => destination.Price, opt => opt.MapFrom(src => src.price)).
+            ForMember(destination => destination.HasWifi, opt => opt.MapFrom(src => src.has_wifi)).
+            ForMember(destination => destination.HasLTE, opt => opt.MapFrom(src => src.has_lte));
         }));
         // if (computers != null)
         // {

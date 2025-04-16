@@ -85,3 +85,4 @@ C:\Users\HP\Desktop\Entity-FrameWork\obj\Debug\net8.0\Entity.pdb
 C:\Users\HP\Desktop\Entity-FrameWork\obj\Debug\net8.0\Entity.genruntimeconfig.cache
 C:\Users\HP\Desktop\Entity-FrameWork\obj\Debug\net8.0\ref\Entity.dll
 C:\Users\HP\Desktop\Entity-FrameWork\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\Entity-FrameWork\bin\Debug\net8.0\AutoMapper.dll
